@@ -1,0 +1,26 @@
+{% extend 'booking_app/base.html'%}
+{% block content %} 
+<h1>Добро пожаловать на наш сайт бронирования билетов!</h1>
+    <form action="{% url 'booking' %}">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="destination">Пункт назначения:</label><br>
+        <select id="class" name="class">
+            {% for station in stations %}
+            <option value="{{station.name}}">{{station.name}}</option>
+            {% endfor %}
+            <!-- Добавьте больше опций по мере необходимости -->
+        </select><br>
+        <label for="date">Дата:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="class">Класс:</label><br>
+        <select id="class" name="class">
+                <option value="moscow">Економ</option>
+                <option value="saintPetersburg">Комфорт</option>
+                <option value="sochi">Бізнес</option>
+        </select><br>
+        <input type="submit" value="Забронировать билет">
+    </form>
+    {% endblock %}
