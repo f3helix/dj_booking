@@ -1,0 +1,117 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Шапка */
+  header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  header img {
+    max-width: 200px;
+  }
+  
+  /* Основная часть */
+  main {
+    padding: 40px 20px;
+  }
+  
+  /* Раздел "О нас" */
+  .about-us {
+    margin-bottom: 40px;
+  }
+  
+  .about-us h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    margin-bottom: 10px;
+  }
+  
+  .about-us ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-us ul li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Раздел "Почему выбирают нас?" */
+  .why-choose-us {
+    text-align: center;
+  }
+  
+  .why-choose-us h2 {
+    margin-bottom: 40px;
+  }
+  
+  .why-choose-us ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .why-choose-us ul li {
+    width: 25%;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .why-choose-us ul li img {
+    margin-bottom: 10px;
+  }
+  
+  .why-choose-us ul li h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Подвал */
+  footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Медиа-запросы */
+  @media (max-width: 768px) {
+    .why-choose-us ul {
+      flex-direction: column;
+    }
+  }
+  

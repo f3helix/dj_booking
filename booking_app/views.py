@@ -15,7 +15,8 @@ def place_detale(request, place_id):
 def add_booking(request):
     return render (request, 'booking_app/booking.html')
 
-
+def home(request):
+    return render(request, 'booking_app/home.html')
 
 
 
