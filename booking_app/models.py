@@ -12,9 +12,10 @@ class Station(models.Model):
     name = models.CharField(max_length = 100)
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
     place = models.ForeignKey(Place, on_delete = models.SET_NULL, null = True)
     date = models.DateField()
-    time = models.TimeField()
+    time = models.TimeField(blank=True, null= True)
     station = models.ForeignKey(Station , on_delete = models.SET_NULL, null = True)
+
+
 

@@ -1,25 +1,33 @@
 {% extends 'booking_app/base.html'%}
 {% block content %} 
-<h1>Добро пожаловать на наш сайт бронирования билетов!</h1>
-    <form action="{% url 'booking' %}">
-        <label for="name">Имя:</label><br>
+<h1>Ласкаво просимо до нашого сайту бронювання квитків!</h1>
+
+    <form action="{% url 'booking' %}" method="post">
+        {% csrf_token %}
+        <label for="name">Ім'я:</label><br>
         <input type="text" id="name" name="name"><br>
+        
+        <label for="name">Час:</label><br>
+        <input type="time" id="time" name="time"><br>
+
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br>
-        <label for="destination">Пункт назначения:</label><br>
-        <select id="class" name="class">
+        <label for="destination">Пункт призначення:</label><br>
+        <select id="destination" name="destination">
             {% for station in stations %}
             <option value="{{station.name}}">{{station.name}}</option>
             {% endfor %}
             <!-- Добавьте больше опций по мере необходимости -->
         </select><br>
+
         <label for="date">Дата:</label><br>
         <input type="date" id="date" name="date"><br>
-        <label for="class">Класс:</label><br>
-        <select id="class" name="class">
-                <option value="moscow">Економ</option>
-                <option value="saintPetersburg">Комфорт</option>
-                <option value="sochi">Бізнес</option>
+
+        <label for="clas">Клас:</label><br>
+        <select id="clas" name="clas">
+                <option value="">Економ</option>
+                <option value="">Комфорт</option>
+                <option value="">Бізнес</option>
         </select><br>
         <input type="submit" value="Забронировать билет">
     </form>
